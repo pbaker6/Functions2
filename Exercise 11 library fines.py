@@ -1,13 +1,8 @@
 # Calculate overdue fines for books at a library
 def calc_fines(days_overdue):
-    base_charge = .5
-    daily_charge = .8
-    max_charge = 30
-    gross_charge = base_charge + (days_overdue * daily_charge)
-    if gross_charge > max_charge:
-        fine = max_charge
-    else:
-        fine = gross_charge
+    fine = .5 + (days_overdue * .8)
+    if fine > 30:
+        fine = 30
     return fine
 
 
